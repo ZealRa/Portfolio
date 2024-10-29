@@ -1,0 +1,65 @@
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacement entre les cartes */
+  justify-content: center; /* Centrer les cartes */
+  align-items: center; /* Aligner les cartes verticalement */
+  padding: 20px; /* Ajout d'un peu de padding autour des cartes */
+}
+
+.project-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  width: 300px; /* Largeur des cartes */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  background-color: #fff; /* Couleur de fond pour le mode jour */
+  color: #333; /* Couleur du texte pour le mode jour */
+}
+
+/* Styles pour le mode nuit */
+body.dark-mode .project-card {
+  background-color: #2c2c2c; /* Couleur de fond pour le mode nuit */
+  border-color: #444; /* Couleur de bordure pour le mode nuit */
+  color: #f0f0f0; /* Couleur du texte pour le mode nuit */
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Effet d'agrandissement au survol */
+}
+
+.project-logo {
+  width: 100%; /* Adapter l'image à la largeur de la carte */
+  height: auto;
+  border-radius: 4px; /* Coins arrondis pour l'image */
+}
+
+.project-content {
+  margin-top: 10px; /* Espacement entre la description et le contenu */
+}
+
+/* Ajout de styles pour le contenu en mode nuit */
+body.dark-mode .project-content {
+  color: #f0f0f0; /* Couleur du texte en mode nuit */
+}
+
+/* Ajout d'un effet d'ombre pour le texte en mode nuit */
+body.dark-mode .project-card {
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Styles pour le bouton de retour */
+.back-button {
+  position: absolute; /* Positionner la flèche */
+  left: 20px; /* Espacement du côté gauche */
+  top: 20px; /* Espacement du haut */
+  font-size: 24px; /* Taille de la flèche */
+  color: #333; /* Couleur de la flèche en mode jour */
+  text-decoration: none; /* Pas de soulignement */
+}
+
+/* Styles pour le mode nuit */
+body.dark-mode .back-button {
+  color: #f0f0f0; /* Couleur de la flèche en mode nuit */
+}
